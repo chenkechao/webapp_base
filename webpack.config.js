@@ -16,8 +16,20 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.scss$/,
+                loader: 'style!css!sass'
+            },
+            {
+                test: /\.js$/,
+                loader: 'ng-annotate!babel?presets[]=es2015',
+                exclude: /node_modules|bower_components/
+            },
+            {
                 test: /\.css$/,
-                loader: 'style!css'
+                loader: "style!css"
+            },{
+                test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
+                loader : 'file-loader?name=res/[name].[ext]?[hash]'
             }
         ]
     },
