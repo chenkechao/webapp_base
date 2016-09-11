@@ -1,6 +1,6 @@
 module.exports = function () {
     /* Styles */
-    require('../style.scss');
+    require('../css/style.scss');
     /* JS */
     require('angular');
 };
