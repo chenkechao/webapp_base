@@ -1,6 +1,7 @@
 'use strict';
 var webpack = require('webpack'),
-    path = require('path');
+    path = require('path'),
+    HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var APP = path.join(__dirname ,'/webapp');
 
@@ -11,7 +12,8 @@ module.exports = {
     },
     output:{
         path:path.join(APP,'/dist/js'),
-        filename:'bundle.js'
+        filename:'bundle.[hash].js',
+        chunkFilename:'[chunkhash:8].chunk.js'
     },
     module: {
         loaders: [
@@ -43,7 +45,8 @@ module.exports = {
             js: path.join(APP, "/src/js")
         },
         root: [//默认搜索路径配置step1
-            path.join(__dirname, "bower_components")
+            path.join(__dirname, 'node_modules'),
+            path.join(__dirname, 'bower_components')
         ],
         extensions: ['', '.js', '.json', '.css']//自行补全哪些文件后缀
     },
@@ -55,6 +58,12 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.ResolverPlugin(//默认搜索路径配置step2
             new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(".bower.json", ["main"])
-        )
+        ),
+        new HtmlWebpackPlugin({
+            title:'custom template',
+            filename:'index.html',
+            template:'./src/tmpl/index.html',
+            inject:'body'
+        })
     ]
 };
