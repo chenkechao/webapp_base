@@ -10,7 +10,7 @@
         this.dom={};
         //加载dialog模板
         var tpl=require('./dialog.html');
-        document.getElementById('body').innerHTML = tpl;
+        $('body').append(tpl);
         this.init();
     };
     dialogModule.prototype={
