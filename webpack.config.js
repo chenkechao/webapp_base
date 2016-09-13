@@ -18,6 +18,10 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.html$/,
+                loader: "html"
+            },
+            {
                 test: /\.css$/,
                 loader: 'style!css'
             },
@@ -37,12 +41,12 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif)$/,
                 loader: 'url-loader?limit=8192'
-            },
+            }
         ]
     },
     resolve:{
         alias: {
-            js: path.join(APP, "/src/js")
+            'jquery':path.join(__dirname,'/node_modules/jquery/dist/jquery.min.js')
         },
         root: [//默认搜索路径配置step1
             path.join(__dirname, 'node_modules'),
@@ -64,6 +68,11 @@ module.exports = {
             filename:'index.html',
             template:'./src/tmpl/index.html',
             inject:'body'
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
         })
     ]
 };
