@@ -1,7 +1,7 @@
 import AppController from './AppController';
 import Users from '../module/users/Users';
 
-export default angular.module('index',['ngMaterial',Users.name]).config(
+export default angular.module('app',['ngMaterial',Users.name]).config(
     ($mdIconProvider, $mdThemingProvider) => {
         // Register the user `avatar` icons
         $mdIconProvider

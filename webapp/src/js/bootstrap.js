@@ -16,7 +16,8 @@ angular.element(document).ready(function () {
     angular.module('angular-bootstrap', [Index.name]).run(//运行块
         ()=>{console.log(`angular is working`);}
     )
-    angular.bootstrap(document, ['angular-bootstrap'], {
+    let body = document.getElementsByTagName("body")[0];
+    angular.bootstrap( body, [ 'angular-bootstrap' ], {
         //strictDi: true
     });
 });

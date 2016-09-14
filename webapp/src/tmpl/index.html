@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title><%=htmlWebpackPlugin.options.title%></title>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'/>
 
 </head>
-<body id="body">
+<body id="body" ng-cloak layout="column" ng-controller="AppController as app">
     <!-- Container #1 (see wireframe) -->
     <md-toolbar layout="row" class="md-toolbar-tools">
         <md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()"
