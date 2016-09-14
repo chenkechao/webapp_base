@@ -2,7 +2,8 @@
 var webpack = require('webpack'),
     path = require('path'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin');//css文件抽取step1
+    ExtractTextPlugin = require('extract-text-webpack-plugin'),//css文件抽取step1
+    TransferWebpackPlugin = require('transfer-webpack-plugin');//文件copy组件step1
 
 var APP = path.join(__dirname ,'/webapp');
 
@@ -13,7 +14,7 @@ module.exports = {
         login:['./src/js/login.js']
     },
     output:{
-        path:path.join(APP,'/dist/js'),
+        path:path.join(APP,'/dist'),
         filename:'[name].[hash].js',
         chunkFilename:'[chunkhash:8].chunk.js'
     },
@@ -36,11 +37,11 @@ module.exports = {
             },
             ,{
                 test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
-                loader : 'file-loader?name=res/[name].[ext]?[hash]'
+                loader : 'file-loader?name=res/[name].[ext]'//name代表输入到output的路径及名称
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                loader: 'url-loader?limit=8192'
+                loader: 'url-loader?limit=8192&name=img/[hash:8].[name].[ext]'
             }
         ]
     },
@@ -84,6 +85,9 @@ module.exports = {
             chunks:['index','login']//选择哪些js提取公共组件
         }),
         //css文件抽取step3
-        new ExtractTextPlugin("[name].css")
+        new ExtractTextPlugin("[name].css"),
+        new TransferWebpackPlugin([////文件copy组件step1
+            {from: path.join(APP,'/src/vendor/svg')}
+        ], path.join(APP,'dist'))
     ]
 };
