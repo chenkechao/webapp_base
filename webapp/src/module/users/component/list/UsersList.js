@@ -5,6 +5,6 @@ export default {
   name : 'usersList',
   config : {
     bindings         : {  users: '<', selected : '<', showDetails : '&onSelected' },
-    templateUrl      : 'webapp/src/module/users/component/list/UsersList.html'
+    templateUrl      : '/src/module/users/component/list/UsersList.html'
   }
 };
