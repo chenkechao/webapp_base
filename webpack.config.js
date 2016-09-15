@@ -6,16 +6,21 @@ var webpack = require('webpack'),
     TransferWebpackPlugin = require('transfer-webpack-plugin');//文件copy组件step1
 
 var APP = path.join(__dirname ,'/webapp');
+var isProduction = function (){
+    return true;
+};
 
 module.exports = {
     context:APP,
+    devtool: isProduction()?null:'eval-source-map',
     entry:{//entry是入口文件，可以多个，代表要编译那些js
         index: ['webpack/hot/dev-server', './src/js/bootstrap.js'],
         login:['./src/js/login.js']
     },
     output:{
         path:path.join(APP,'/dist'),
-        filename:'[name].[hash].js',
+        //filename:'[name].[hash].js',
+        filename:'[name].js',
         chunkFilename:'[chunkhash:8].chunk.js'
     },
     module: {
@@ -24,8 +29,8 @@ module.exports = {
                 test: /\.html$/,
                 loader: "html"
             },
-            //{test: /\.css$/, loader: 'style!css!'},
-            {test: /\.css$/, loader:ExtractTextPlugin.extract('style','css')},//css文件抽取step2
+            {test: /\.css$/, loader: 'style!css!'},
+            //{test: /\.css$/, loader:ExtractTextPlugin.extract('style','css')},//css文件抽取step2
             {
                 test: /\.scss$/,
                 loader: 'style!css!sass'
@@ -80,14 +85,32 @@ module.exports = {
             jQuery: "jquery",
             "window.jQuery": "jquery"
         }),
-        new webpack.optimize.CommonsChunkPlugin({//公共组件提取
-            name: 'vendor',//生成的公共组件名称
-            chunks:['index','login']//选择哪些js提取公共组件
-        }),
+        // new webpack.optimize.CommonsChunkPlugin({//公共组件提取
+        //     name: 'vendor',//生成的公共组件名称
+        //     chunks:['index','login']//选择哪些js提取公共组件
+        // }),
         //css文件抽取step3
-        new ExtractTextPlugin("[name].css"),
+        //new ExtractTextPlugin("[name].css"),
         new TransferWebpackPlugin([////文件copy组件step1
             {from: path.join(APP,'/src/vendor/svg')}
         ], path.join(APP,'dist'))
     ]
 };
+
+if (process.env.NODE_ENV !== 'production') {
+    // module.exports.plugins = [
+    //     new webpack.DefinePlugin({
+    //         'process.env': {
+    //             NODE_ENV: JSON.stringify('production')
+    //         }
+    //     }),
+    //     new webpack.optimize.UglifyJsPlugin({
+    //         compress: {
+    //             warnings: false
+    //         }
+    //     }),
+    //     new webpack.optimize.OccurenceOrderPlugin()
+    // ]
+} else {
+    module.exports.devtool = '#source-map'
+}
