@@ -85,7 +85,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b1d34c68374bf11c5555"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "29c255e2278eed719619"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -80722,7 +80722,7 @@
 	  name: 'usersList',
 	  config: {
 	    bindings: { users: '<', selected: '<', showDetails: '&onSelected' },
-	    templateUrl: 'src/module/users/component/list/UsersList.html'
+	    templateUrl: 'webapp/src/module/users/component/list/UsersList.html'
 	  }
 	};
 
