@@ -85,7 +85,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "29c255e2278eed719619"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "53bab76eb8216addbc76"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -80746,7 +80746,7 @@
 	  name: 'userDetails',
 	  config: {
 	    bindings: { selected: '<' },
-	    templateUrl: 'webapp/src/module/users/component/details/UserDetails.html',
+	    templateUrl: 'webapp/src/module/users/components/details/UserDetails.html',
 	    controller: ['$mdBottomSheet', '$log', _UserDetailsController2.default]
 	  }
 	};
