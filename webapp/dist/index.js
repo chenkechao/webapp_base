@@ -85,7 +85,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "53bab76eb8216addbc76"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b1d34c68374bf11c5555"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -80722,7 +80722,7 @@
 	  name: 'usersList',
 	  config: {
 	    bindings: { users: '<', selected: '<', showDetails: '&onSelected' },
-	    templateUrl: 'webapp/src/module/users/component/list/UsersList.html'
+	    templateUrl: 'src/module/users/component/list/UsersList.html'
 	  }
 	};
 
@@ -80746,7 +80746,7 @@
 	  name: 'userDetails',
 	  config: {
 	    bindings: { selected: '<' },
-	    templateUrl: 'webapp/src/module/users/components/details/UserDetails.html',
+	    templateUrl: 'webapp/src/module/users/component/details/UserDetails.html',
 	    controller: ['$mdBottomSheet', '$log', _UserDetailsController2.default]
 	  }
 	};
