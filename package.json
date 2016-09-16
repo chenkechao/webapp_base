@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/webpack-dev-server --hot",
+    "start": "./node_modules/.bin/webpack-dev-server --content-base webapp --hot",
     "build": "./node_modules/.bin/webpack --progress --profile --colors --config webpack.config.js"
   },
   "repository": {
@@ -42,6 +42,7 @@
     "angular-aria": "^1.5.8",
     "angular-material": "^1.1.1",
     "angular-messages": "^1.5.8",
+    "angular-route": "^1.5.8",
     "jquery": "^3.1.0"
   }
 }

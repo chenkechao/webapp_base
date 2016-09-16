@@ -9,7 +9,7 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'/>
 
 </head>
-<body id="body" ng-cloak layout="column" ng-controller="AppController as app">
+<body id="body" ng-cloak layout="column" ng-controller="UsersController as app">
     <!-- Container #1 (see wireframe) -->
     <md-toolbar layout="row" class="md-toolbar-tools">
         <md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()"
@@ -36,9 +36,10 @@
         <!-- Container #4 -->
         <md-content flex id="content">
             <!-- Custom UserDetails component -->
-            <user-details
-                    selected="app.selected" >
-            </user-details>
+            <!--<user-details-->
+                    <!--selected="app.selected" >-->
+            <!--</user-details>-->
+            <material-widget></material-widget>
         </md-content>
         <button id="ensure">ensure</button>
 

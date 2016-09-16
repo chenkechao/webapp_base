@@ -1,4 +1,4 @@
-import AppController from './AppController';
+import UsersController from '../module/users/controller/UsersController';
 import Users from '../module/users/Users';
 
 export default angular.module('app',['ngMaterial',Users.name]).config(
@@ -14,8 +14,15 @@ export default angular.module('app',['ngMaterial',Users.name]).config(
             .icon("phone", "dist/phone.svg", 24);
 
         $mdThemingProvider.theme('default')
-            .primaryPalette('brown')
-            .accentPalette('red');
+            .primaryPalette('brown',{
+                'default': '400',
+                'hue-1': '200',
+                'hue-2': '700',
+                'hue-3': 'A400'
+            })
+            .accentPalette('red')
+            .warnPalette('orange')
+            .backgroundPalette('grey');
     }
-).controller('AppController', AppController);
+).controller('UsersController', UsersController);
 

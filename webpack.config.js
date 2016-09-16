@@ -18,7 +18,7 @@ module.exports = {
         login:['./src/js/login.js']
     },
     output:{
-        path:path.join(__dirname,'/dist'),
+        path:path.join(APP,'/dist'),
         //filename:'[name].[hash].js',
         filename:'[name].js',
         chunkFilename:'[chunkhash:8].chunk.js'

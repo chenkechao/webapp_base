@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <base href="/webapp_base/webapp/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -9,7 +10,7 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'/>
 
 </head>
-<body id="body" ng-cloak layout="column" ng-controller="AppController as app">
+<body id="body" ng-cloak layout="column" ng-controller="UsersController as app">
     <!-- Container #1 (see wireframe) -->
     <md-toolbar layout="row" class="md-toolbar-tools">
         <md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()"
@@ -36,13 +37,14 @@
         <!-- Container #4 -->
         <md-content flex id="content">
             <!-- Custom UserDetails component -->
-            <user-details
-                    selected="app.selected" >
-            </user-details>
+            <!--<user-details-->
+                    <!--selected="app.selected" >-->
+            <!--</user-details>-->
+            <material-widget></material-widget>
         </md-content>
         <button id="ensure">ensure</button>
 
     </div>
 
-<script type="text/javascript" src="dist/index.js?ddbabea4c69d4ceef463"></script></body>
+<script type="text/javascript" src="./dist/index.js?110389846c5048a25bde"></script></body>
 </html>
