@@ -5,7 +5,7 @@ var webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),//css文件抽取step1
     TransferWebpackPlugin = require('transfer-webpack-plugin');//文件copy组件step1
 
-var APP = path.join(__dirname ,'/');
+var APP = path.join(__dirname ,'/webapp');
 var isProduction = function (){
     return true;
 };
@@ -18,7 +18,7 @@ module.exports = {
         login:['./src/js/login.js']
     },
     output:{
-        path:path.join(APP,'/dist'),
+        path:path.join(__dirname,'/dist'),
         //filename:'[name].[hash].js',
         filename:'[name].js',
         chunkFilename:'[chunkhash:8].chunk.js'
@@ -85,10 +85,10 @@ module.exports = {
             jQuery: "jquery",
             "window.jQuery": "jquery"
         }),
-        new webpack.optimize.CommonsChunkPlugin({//公共组件提取
-            name: 'vendor',//生成的公共组件名称
-            chunks:['index','login']//选择哪些js提取公共组件
-        }),
+        // new webpack.optimize.CommonsChunkPlugin({//公共组件提取
+        //     name: 'vendor',//生成的公共组件名称
+        //     chunks:['index','login']//选择哪些js提取公共组件
+        // }),
         //css文件抽取step3
         //new ExtractTextPlugin("[name].css"),
         new TransferWebpackPlugin([////文件copy组件step1

@@ -1,4 +1,4 @@
-require('../../node_modules/angular-material/angular-material.min.css');
+require('../../../node_modules/angular-material/angular-material.min.css');
 /* Styles */
 require('../css/style.scss');
 
