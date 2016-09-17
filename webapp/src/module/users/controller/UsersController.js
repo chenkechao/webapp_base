@@ -1,9 +1,4 @@
-/**
- * Main App Controller for the Angular Material Starter App
- * @param UsersDataService
- * @param $mdSidenav
- * @constructor
- */
+//function的名称对应ng-controller的名称
 function UsersController(UsersDataService, $mdSidenav) {
   var self = this;
 

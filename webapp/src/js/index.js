@@ -1,7 +1,9 @@
-import UsersController from '../module/users/controller/UsersController';
 import Users from '../module/users/Users';
+import ToolbarMain from '../module/toolbar/ToolbarMain';
+import UsersController from '../module/users/controller/UsersController';
+import  ToolbarController from '../module/toolbar/controller/ToolbarController';
 
-export default angular.module('app',['ngMaterial',Users.name]).config(
+export default angular.module('app',['ngMaterial',Users.name,ToolbarMain.name]).config(
     ($mdIconProvider, $mdThemingProvider) => {
         // Register the user `avatar` icons
         $mdIconProvider
@@ -24,5 +26,6 @@ export default angular.module('app',['ngMaterial',Users.name]).config(
             .warnPalette('orange')
             .backgroundPalette('grey');
     }
-).controller('UsersController', UsersController);
+).controller('UsersController', UsersController)
+    .controller('ToolbarController',ToolbarController);
 
