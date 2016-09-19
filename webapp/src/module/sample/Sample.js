@@ -1,3 +1,3 @@
-/**
- * Created by chenkechao on 2016/9/16.
- */
+import MaterialWidget from "./component/MaterialWidget";
+export default angular.module('materialWidget',['ngMaterial'])
+    .component(MaterialWidget.name,MaterialWidget.config);

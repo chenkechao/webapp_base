@@ -15,7 +15,7 @@ module.exports = {
     devtool: isProduction()?null:'eval-source-map',
     entry:{//entry是入口文件，可以多个，代表要编译那些js
         index: ['webpack/hot/dev-server', './src/js/bootstrap.js'],
-        login:['./src/js/login.js']
+        login:['./src/module/login/login.js']
     },
     output:{
         path:path.join(APP,'/dist'),

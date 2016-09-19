@@ -18,21 +18,23 @@
         <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')"
                     md-component-id="left" ng-click="app.toggleList()">
             <!-- Custom UsersList component -->
-            <users-list
-                    users="app.users"
-                    selected="app.selected"
-                    on-selected="app.selectUser(user)">
-            </users-list>
+            <!--<users-list-->
+                    <!--users="app.users"-->
+                    <!--selected="app.selected"-->
+                    <!--on-selected="app.selectUser(user)">-->
+            <!--</users-list>-->
+            <menu-list></menu-list>
         </md-sidenav>
         <!-- Container #4 -->
-        <md-content flex id="content">
+        <md-content ui-view flex id="content">
             <!-- Custom UserDetails component -->
             <!--<user-details-->
                     <!--selected="app.selected" >-->
             <!--</user-details>-->
             <material-widget></material-widget>
+            <!--<register></register>-->
         </md-content>
-        <button id="ensure">ensure</button>
+        <button id="ensure" style="display: none;">ensure</button>
     </div>
 </body>
 </html>

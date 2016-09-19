@@ -1,13 +1,13 @@
 
-export default function () {
+function LoginController($scope) {
     var self = this;
 
     // *********************************
     // Internal methods
     // *********************************
-    function gotoLogin() {
-        alert('gotoLogin');
+    $scope.login = function () {
+        alert("login");
     }
 }
 
-//export default [ UsersController ];
+export default ["$scope", LoginController ];

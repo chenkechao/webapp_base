@@ -1,7 +1,17 @@
-<md-toolbar layout="row" class="md-toolbar-tools">
+<md-toolbar layout="row" flex class="md-toolbar-tools">
     <md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()"
                aria-label="Show User List">
         <md-icon md-svg-icon="menu"></md-icon>
     </md-button>
-    <h1>超人网</h1>
+
+    <div><md-icon md-svg-icon="logo"></md-icon></div>
+    <div><h1>angular</h1></div>
+
+    <span flex></span>
+
+    <md-button aria-label="注册" ui-sref="register">注册</md-button>
+    <md-button aria-label="登录" ng-click="$ctrl.gotoLogin()">登录</md-button>
+    <md-button class="md-fab md-mini" aria-label="登陆">
+        <md-icon md-svg-icon="more_vert"></md-icon>
+    </md-button>
 </md-toolbar>
