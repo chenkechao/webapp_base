@@ -18,12 +18,12 @@
         <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')"
                     md-component-id="left" ng-click="app.toggleList()">
             <!-- Custom UsersList component -->
-            <!--<users-list-->
-                    <!--users="app.users"-->
-                    <!--selected="app.selected"-->
-                    <!--on-selected="app.selectUser(user)">-->
-            <!--</users-list>-->
-            <menu-list></menu-list>
+            <users-list
+                    users="app.users"
+                    selected="app.selected"
+                    on-selected="app.selectUser(user)">
+            </users-list>
+            <!--<menu-list></menu-list>-->
         </md-sidenav>
         <!-- Container #4 -->
         <md-content ui-view flex id="content">
@@ -34,6 +34,7 @@
             <material-widget></material-widget>
             <!--<register></register>-->
         </md-content>
+        <button ng-click="app.toggleUsersList()">ddd</button>
         <button id="ensure" style="display: none;">ensure</button>
     </div>
 </body>

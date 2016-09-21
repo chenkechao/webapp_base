@@ -6,7 +6,7 @@ import Register from '../module/register/Register';
 import UsersController from '../module/users/controller/UsersController';
 import ToolbarController from '../module/toolbar/controller/ToolbarController';
 
-export default angular.module('app',['ngMaterial','ui.router',Users.name,ToolbarMain.name,Menu.name
+export default angular.module('start-app',['ngMaterial','ui.router',Users.name,ToolbarMain.name,Menu.name
     ,Sample.name,Register.name])
     .config(
         ($mdIconProvider, $mdThemingProvider) => {
