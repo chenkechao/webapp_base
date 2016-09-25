@@ -4,14 +4,95 @@
         <md-icon md-svg-icon="menu"></md-icon>
     </md-button>
 
-    <div><md-icon md-svg-icon="logo"></md-icon></div>
-    <div><h1>angular</h1></div>
+    <div class="logo" flex-offset-lg="5">
+        <md-icon md-svg-icon="logo"></md-icon>
+        <span>生活圈</span>
+    </div>
+
+    <md-menu-bar>
+        <md-menu>
+            <button ng-click="$mdOpenMenu()">
+                同城交易
+            </button>
+            <md-menu-content>
+                <md-menu-item>
+                    <md-menu>
+                        <md-button ng-click="$mdOpenMenu()">New</md-button>
+                        <md-menu-content>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Document', $event)">Document</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Spreadsheet</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Presentation</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Form', $event)">Form</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Drawing', $event)">Drawing</md-button></md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="ctrl.sampleAction('Rename', $event)">
+                        Rename
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+        <md-menu>
+            <button ng-click="$mdOpenMenu()">
+                同城优惠
+            </button>
+            <md-menu-content>
+                <md-menu-item>
+                    <md-menu>
+                        <md-button ng-click="$mdOpenMenu()">New</md-button>
+                        <md-menu-content>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Document', $event)">Document</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Spreadsheet</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Presentation</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Form', $event)">Form</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Drawing', $event)">Drawing</md-button></md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="ctrl.sampleAction('Rename', $event)">
+                        Rename
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+        <md-menu>
+            <button ng-click="$mdOpenMenu()">
+                同城交友
+            </button>
+            <md-menu-content>
+                <md-menu-item>
+                    <md-menu>
+                        <md-button ng-click="$mdOpenMenu()">New</md-button>
+                        <md-menu-content>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Document', $event)">Document</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Spreadsheet</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Presentation</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Form', $event)">Form</md-button></md-menu-item>
+                            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Drawing', $event)">Drawing</md-button></md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="ctrl.sampleAction('Rename', $event)">
+                        Rename
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </md-menu-bar>
 
     <span flex></span>
+    <div class="header-menu" data>
+        <ul>
+            <li><i class="fa fa-search"></i></li>
+            <li><a>微信公众号</a></li>
+            <li><a>登陆</a></li>
+        </ul>
+    </div>
 
-    <md-button aria-label="注册" ui-sref="register">注册</md-button>
-    <md-button aria-label="登录" ng-click="$ctrl.gotoLogin()">登录</md-button>
-    <md-button class="md-fab md-mini" aria-label="登陆">
-        <md-icon md-svg-icon="more_vert"></md-icon>
-    </md-button>
 </md-toolbar>

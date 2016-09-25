@@ -9,33 +9,15 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'/>
 
 </head>
-<body id="body" ng-cloak layout="column" ng-controller="UsersController as app">
+<body id="body" ng-cloak layout="column" ng-controller="IndexController as index">
     <!-- Container #1 (see wireframe) -->
     <toolbar></toolbar>
     <!-- Container #2 -->
-    <div flex layout="row">
-        <!-- Container #3 -->
-        <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')"
-                    md-component-id="left" ng-click="app.toggleList()">
-            <!-- Custom UsersList component -->
-            <users-list
-                    users="app.users"
-                    selected="app.selected"
-                    on-selected="app.selectUser(user)">
-            </users-list>
-            <!--<menu-list></menu-list>-->
-        </md-sidenav>
-        <!-- Container #4 -->
-        <md-content ui-view flex id="content">
-            <!-- Custom UserDetails component -->
-            <!--<user-details-->
-                    <!--selected="app.selected" >-->
-            <!--</user-details>-->
-            <material-widget></material-widget>
-            <!--<register></register>-->
-        </md-content>
-        <button ng-click="app.toggleUsersList()">ddd</button>
-        <button id="ensure" style="display: none;">ensure</button>
-    </div>
+
+    <md-content flex id="content" >
+        <div ui-view="" ng-cloak>
+        </div>
+    </md-content>
+    <button id="ensure" style="display: none;">ensure</button>
 </body>
 </html>
