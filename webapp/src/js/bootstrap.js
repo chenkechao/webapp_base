@@ -94,15 +94,15 @@ angular.element(document).ready(function () {
 
             // Register the user `avatar` icons
             $mdIconProvider
-                .defaultIconSet("dist/avatars.svg", 128)
-                .icon("logo","dist/logo.svg",24)
-                .icon("menu", "dist/menu.svg", 24)
-                .icon("share", "dist/share.svg", 24)
-                .icon("google_plus", "dist/google_plus.svg", 24)
-                .icon("hangouts", "dist/hangouts.svg", 24)
-                .icon("twitter", "dist/twitter.svg", 24)
-                .icon("phone", "dist/phone.svg", 24)
-                .icon("more_vert","dist/more_vert.svg", 24);
+                .defaultIconSet("dist/img/svg/avatars.svg", 128)
+                .icon("logo","dist/img/svg/logo.svg",24)
+                .icon("menu", "dist/img/svg/menu.svg", 24)
+                .icon("share", "dist/img/svg/share.svg", 24)
+                .icon("google_plus", "dist/img/svg/google_plus.svg", 24)
+                .icon("hangouts", "dist/img/svg/hangouts.svg", 24)
+                .icon("twitter", "dist/img/svg/twitter.svg", 24)
+                .icon("phone", "dist/img/svg/phone.svg", 24)
+                .icon("more_vert","dist/img/svg/more_vert.svg", 24);
 
             // Use that theme for the primary intentions
             // $mdThemingProvider.theme('default')

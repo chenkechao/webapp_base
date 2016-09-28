@@ -92,7 +92,7 @@ module.exports = {
         //css文件抽取step3
         //new ExtractTextPlugin("[name].css"),
         new TransferWebpackPlugin([////文件copy组件step1
-            {from: path.join(APP,'/src/vendor/svg')}
+            {from: path.join(APP,'/src/vendor')}
         ], path.join(APP,'dist'))
     ]
 };

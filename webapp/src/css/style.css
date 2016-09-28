@@ -153,6 +153,55 @@ md-sidenav md-list {
 } */
 
 /* Primary content area */
+/* 轮播*/
+.index-slider {
+    margin-bottom : 10px;
+}
+
+.index-slider .slider-content {
+    width: 630px;
+    height: 310px;
+    position: relative;
+    float: left;
+}
+
+.index-slider .slider-content .unslider-arrow {
+    position: absolute;
+    width: 21px;
+    height: 54px;
+    padding: 12px;
+    top: 50%;
+    margin-top: -52px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.index-slider .slider-content .unslider-arrow.fa-angle-left{
+    left: 20px;
+}
+
+.index-slider .slider-content .unslider-arrow.fa-angle-right {
+    right: 20px;
+}
+
+.index-slider .slider-content ul {
+    z-index: 1;
+    height: 600px;
+    width: 3000px;
+}
+
+.index-slider .slider-content .slider-item {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    background: url("../vendor/img/index-slider-2.jpg") no-repeat;
+}
+
+.index-slider .slider-content .slider-item div {
+    width: 620px;
+    height: 310px;
+    background: url("../vendor/img/index-slider-2.jpg") no-repeat;
+}
 
 #content {
     overflow: scroll;
