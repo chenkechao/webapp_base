@@ -10,6 +10,10 @@ function MainController(MainService) {
         .then( function( fastNews ) {
             self.fastNews = fastNews;
         });
+
+    function prev() {
+        alert("prev");
+    }
 }
 
 export default ["MainService",MainController];

@@ -158,49 +158,58 @@ md-sidenav md-list {
     margin-bottom : 10px;
 }
 
+.index-slider .unslider-arrow {
+    position: absolute;
+    width: 21px;
+    height: 54px;
+    top: 40%;
+    overflow: hidden;
+    color:#ffffff;
+    z-index: 2;
+}
+
+.index-slider .unslider-arrow.fa-angle-left{
+    left: 20px;
+}
+
+.index-slider .unslider-arrow.fa-angle-right {
+    right: 20px;
+}
+
 .index-slider .slider-content {
     width: 630px;
     height: 310px;
     position: relative;
     float: left;
-}
-
-.index-slider .slider-content .unslider-arrow {
-    position: absolute;
-    width: 21px;
-    height: 54px;
-    padding: 12px;
-    top: 50%;
-    margin-top: -52px;
     overflow: hidden;
-    z-index: 2;
-}
-
-.index-slider .slider-content .unslider-arrow.fa-angle-left{
-    left: 20px;
-}
-
-.index-slider .slider-content .unslider-arrow.fa-angle-right {
-    right: 20px;
 }
 
 .index-slider .slider-content ul {
     z-index: 1;
     height: 600px;
     width: 3000px;
+    margin: 15px;
+    padding: 0px;
 }
 
-.index-slider .slider-content .slider-item {
-    position: relative;
-    overflow: hidden;
-    float: left;
-    background: url("../vendor/img/index-slider-2.jpg") no-repeat;
+.index-slider .slider-content ul li {
+    list-style: none outside none;
 }
 
-.index-slider .slider-content .slider-item div {
+.index-slider .slider-content ul div {
     width: 620px;
     height: 310px;
     background: url("../vendor/img/index-slider-2.jpg") no-repeat;
+}
+
+.index-slider .slider-progress {
+    position: absolute;
+    top: 100%;
+    background: #ff8fae;
+}
+
+.index-slider .slider-progress .md-bar2 {
+    background: #ff0000;
 }
 
 #content {
