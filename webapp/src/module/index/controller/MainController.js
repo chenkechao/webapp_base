@@ -11,7 +11,7 @@ function MainController(MainService) {
             self.fastNews = fastNews;
         });
 
-    function prev() {
+    self.prev = function() {
         alert("prev");
     }
 }
