@@ -14,7 +14,7 @@ module.exports = {
     context:APP,
     devtool: isProduction()?null:'eval-source-map',
     entry:{//entry是入口文件，可以多个，代表要编译那些js
-        index: ['webpack/hot/dev-server', './src/js/bootstrap.js'],
+        app: ['webpack/hot/dev-server', './src/app.js'],
         login:['./src/module/login/login.js']
     },
     output:{
@@ -67,10 +67,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             title:'custom template',
             filename:'index.html',
-            template:'./src/tmpl/index.html',
+            template:'./src/index.html',
             inject:'body',
             hash:true,
-            chunks:['index','vendor']//这个模板对应上面那个节点
+            chunksSortMode:'dependency',//在chunk被插入到html之前，你可以控制它们的排序
+            chunks:['app','vendor']//这个模板对应上面那个节点
         }),
         new HtmlWebpackPlugin({
             title:'login',
