@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="login">
+<head>
+    <meta charset="UTF-8">
+    <title><%=htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+<div layout="column" layout-padding ng-cloak ng-controller="LoginController as vm">
+    <form name="form" ng-submit="vm.submit(vm.form)" novalidate="novalidate">
+    <br/>
+    <md-content class="md-no-momentum">
+        <md-input-container class="md-icon-float md-block">
+            <!-- Use floating label instead of placeholder -->
+            <label for="userName">用户名</label>
+            <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+            <input id="userName" name="userName" ng-model="vm.form.userName" type="text" ng-required="true">
+            <div class="hint" ng-show="false">请输入你的用户名</div>
+
+            <div ng-messages="form.userName.$error">
+                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                    此项为必填项
+                </div>
+            </div>
+
+        </md-input-container>
+
+        <md-input-container md-no-float class="md-block">
+            <label for="password">密码</label>
+            <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon>
+            <input id="password" name="password" ng-model="vm.form.password" type="password">
+        </md-input-container>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button class="md-raised md-primary" type="submit">登录</md-button>
+            <md-button class="md-raised md-warn">取消</md-button>
+        </section>
+
+    </md-content>
+        </form>
+
+</div>
+</body>
+</html>
